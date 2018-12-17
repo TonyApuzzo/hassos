@@ -30,6 +30,11 @@ i2c-bcm2708
 
 ## Tweaks
 
-If you don't need bluetooth, disabled it with add `dtoverlay=pi3-disable-bt` into `config.txt`.
+### Bluetooth
+If you don't need bluetooth, disable it by adding `dtoverlay=pi3-disable-bt` into `config.txt`.
+
+### GPU Memory
+
+The minimum GPU/CPU RAM split can be set by adding `gpu_mem=32` into `config.txt`. This will gain 32 MiB RAM for HASSOS. If gpu_mem is too low (e.g., 16) then the RPi will fail to boot and the green ACT LED will flash 4 times in a never ending loop. In order to use the Raspberry Pi Camera, set `gpu_mem=128`.
 
 [config]: ../configuration.md#automatic
